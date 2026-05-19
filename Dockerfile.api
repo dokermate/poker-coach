@@ -8,7 +8,7 @@ COPY gto_advisor/ ./gto_advisor/
 COPY alembic/ ./alembic/
 COPY alembic.ini .
 
-RUN pip install --no-cache-dir email-validator "pydantic[email]" fastapi uvicorn[standard] sqlalchemy alembic python-jose[cryptography] passlib[bcrypt] python-multipart pydantic-settings treys aiosqlite greenlet
+RUN pip install --no-cache-dir email-validator "pydantic[email]" fastapi uvicorn[standard] sqlalchemy alembic "python-jose[cryptography]" "passlib[bcrypt]" "bcrypt==4.0.1" python-multipart pydantic-settings treys aiosqlite greenlet
 
 RUN mkdir -p /app/data
 
