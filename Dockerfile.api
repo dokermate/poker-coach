@@ -8,7 +8,7 @@ COPY gto_advisor/ ./gto_advisor/
 COPY alembic/ ./alembic/
 COPY alembic.ini .
 
-RUN pip install --no-cache-dir .
+RUN pip install --no-cache-dir fastapi uvicorn[standard] sqlalchemy alembic python-jose[cryptography] passlib[bcrypt] python-multipart pydantic pydantic-settings treys aiosqlite greenlet
 
 EXPOSE 8000
 
