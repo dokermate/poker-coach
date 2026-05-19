@@ -40,7 +40,7 @@ with st.sidebar:
 
     st.divider()
     for label, path in pages.items():
-        st.page_link(f"ui/{path}", label=label)
+        st.page_link(f"pages/{path.split('/')[-1]}", label=label)
 
 st.title("♠️ Poker Coach")
 st.markdown(
