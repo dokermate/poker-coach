@@ -1,0 +1,11 @@
+# Railway deployment configuration
+# Deploys both API and UI as separate services
+
+[build]
+builder = "DOCKERFILE"
+
+[deploy]
+healthcheckPath = "/health"
+healthcheckTimeout = 30
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 3

@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Environment & secrets
+.env
+
+# Database
+*.db
+*.sqlite3
+
+# Streamlit
+.streamlit/
+
+# Misc
+.DS_Store
+*.log
