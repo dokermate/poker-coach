@@ -10,6 +10,8 @@ COPY alembic.ini .
 
 RUN pip install --no-cache-dir email-validator "pydantic[email]" fastapi uvicorn[standard] sqlalchemy alembic python-jose[cryptography] passlib[bcrypt] python-multipart pydantic-settings treys aiosqlite greenlet
 
+RUN mkdir -p /app/data
+
 EXPOSE 8000
 
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
